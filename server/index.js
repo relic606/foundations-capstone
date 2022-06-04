@@ -4,6 +4,7 @@ const { PORT, NODE_ENV } = process.env
 
 const path = require('path')
 const express = require('express')
+const cors = require("cors")
 const app = express()
 const {seed} = require('./seed.js')
 const {
@@ -13,6 +14,7 @@ const {
     addWorkout
 } = require('./controller.js')
 
+app.request(cors())
 app.use(express.json())
 
 app.post('/seed', seed)
