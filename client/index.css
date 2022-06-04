@@ -1,0 +1,143 @@
+* {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Calibri', 'Arial', sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+.weekday {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #003559;
+    border-top: solid 2px #003559;
+    border-bottom: solid 2px #003559;
+    margin: 0px;
+    background-color: #006DAA;
+    color: #B9D6F2;
+}
+
+#sunday-plan {
+    border-left: solid 2px #003559;
+    border-radius: 10px 0px 0px 10px;
+}
+#saturday-plan {
+    border-right: solid 2px #003559;
+    border-radius: 0px 10px 10px 0px;
+}
+
+header {
+    height: 50px;
+    font-size: x-large;
+    color: white;
+    background-color: #061A40;
+    text-align: center;
+}
+
+main {
+    margin-top: 50px;
+    margin-right: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-sections {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+
+.main-button-divs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+}
+
+select {
+    width: 140px;
+    transition: .5s;
+}
+
+#workout-week-plan {
+    margin: 25px 50px 25px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border-radius: 15px;
+}
+
+.weekday-box-title {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: larger;
+}
+
+ul {
+    list-style-type: none;
+}
+.remove-btn-divs {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#reset-week-btn {
+    margin-left: 50px;
+}
+
+
+.list-elem {
+    animation-name: example;
+    animation-duration: 2.5s;
+}
+button {
+    background-color: #006DAA;
+    padding: 4px;
+    transition: 0.25s;
+    border-radius: 11px;
+    border: 1px solid black;
+    color: white;
+}
+
+button:hover{
+    cursor:pointer;
+    color: black;
+    background-color: #B9D6F2;
+    transform: translateY(-2px)
+}
+button:active{
+    transform: translateY(1px);
+}
+
+select:hover{
+    cursor:pointer;
+    background-color: #B9D6F2;
+}
+
+@keyframes example {
+    0%   {color: white; }
+    20%  {color: red;}
+    40%   {color: white;}
+    60%  {color: red;}
+    80%  {color: white;}
+    100% {color: red;}
+  }
+  
+  .remove-last-btns {
+      border-radius: 40%;
+      width: 20px;
+      background-color: #003559;
+      color: #006DAA;
+  }
+
+  .list-divs {
+    height: 280px;
+    width: 220px;
+  }

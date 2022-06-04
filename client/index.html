@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles">
+    <title>Document</title>
+</head>
+<body>
+    <header>Andy's Workout Manager</header>
+    <main>
+
+        <section class="main-sections">
+            <label>Select Muscle Group</label>
+            <select id="muscle-group-selector"">
+                <option value="default">Select an option</option>
+            </select>
+            <div class="main-button-divs">
+                <input type="text" id="workout-input" maxlength="25" placeholder="Enter a workout here"> 
+                <button id="add-workout-btn">Add to Muscle Group</button>
+            </div>
+            
+        </section>
+        
+        <section class="main-sections">
+            <label>Select a Workout From this Muscle Group:</label>
+            <select id="workout-selector"">
+                <option value="default">Select an option</option>
+            </select>
+            <div class="main-button-divs">
+                <p>
+                    Delete Selected Workout
+                </p>
+                <button id="delete-workout-btn">Click to delete</button>
+            </div>
+            
+        </section>
+        
+        <section class="main-sections">
+            <label>Select a Weekday:</label>
+            <select id="weekday-selector">
+                <option value="sunday">Sunday</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+            </select>
+            <div class="main-button-divs">
+                <p>
+                    Add Selected Workout to Week Plan
+                </p>
+                <button id="add-to-plan-btn">Click to add</button>
+            </div>
+            
+        </section>
+    </main>
+        
+<section id="workout-week-plan">
+    <div id="sunday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Sunday
+            </div>
+            <ul id="sunday-list" class="list-divs">
+    
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-sunday-btn" class="remove-last-btns"> X </button>
+        </div>
+    </div>
+    <div id="monday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Monday
+            </div>
+            <ul id="monday-list" class="list-divs">
+                
+            </ul>
+        </div>
+            <div class="remove-btn-divs">
+                <button id="remove-last-monday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+    <div id="tuesday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Tuesday
+            </div>
+            <ul id="tuesday-list" class="list-divs">
+    
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-tuesday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+    <div id="wednesday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Wednesday
+            </div>
+            <ul id="wednesday-list" class="list-divs">
+                
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-wednesday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+    <div id="thursday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Thursday
+            </div>
+            <ul id="thursday-list" class="list-divs">
+                
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-thursday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+    <div id="friday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Friday
+            </div>
+            <ul id="friday-list" class="list-divs">
+                
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-friday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+    <div id="saturday-plan" class="weekday">
+        <div>
+            <div class="weekday-box-title">
+                Saturday
+            </div>
+            <ul id="saturday-list" class="list-divs">
+                
+            </ul>
+        </div>
+        <div class="remove-btn-divs">
+            <button id="remove-last-saturday-btn" class="remove-last-btns">X</button>
+        </div>
+    </div>
+</section>
+<button id="reset-week-btn">Reset Week Plan</button>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/js"></script>
+</body>
+</html>
