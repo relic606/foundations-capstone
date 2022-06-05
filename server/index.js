@@ -1,6 +1,7 @@
 require('dotenv').config();
 
-const { PORT, NODE_ENV } = process.env
+const { NODE_ENV } = process.env
+const PORT = process.env.PORT || 9000;
 
 const path = require('path')
 const express = require('express')
@@ -12,7 +13,8 @@ const {
     getWorkouts,
     deleteWorkout,
     addWorkout
-} = require('./controller.js')
+} = require('./controller.js');
+const { port } = require('pg/lib/defaults');
 
 app.use(cors())
 app.use(express.json())
@@ -36,11 +38,14 @@ app.post('/api/workouts', getWorkouts)
 app.post('/api/addworkout', addWorkout)
 app.delete('/api/workouts', deleteWorkout)
 
-
 app.listen(PORT, () => {
-    if (NODE_ENV === 'development'){
-        console.log(`Server running on http://localhost:${PORT}/`)
-    } else{
-        console.log(`Server running on port ${PORT}`)
-    }
+    console.log(`Server running on port ${PORT}: http://localhost:${PORT}`)
 })
+
+// app.listen(PORT, () => {
+//     if (NODE_ENV === 'development'){
+//         console.log(`Server running on http://localhost:${PORT}/`)
+//     } else{
+//         console.log(`Server running on port ${PORT}`)
+//     }
+// })
