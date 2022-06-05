@@ -34,12 +34,18 @@ app.post('/api/workouts', getWorkouts)
 app.post('/api/addworkout', addWorkout)
 app.delete('/api/workouts', deleteWorkout)
 
-const { PORT, NODE_ENV } = process.env
+let { PORT, NODE_ENV } = process.env
 
-app.listen(PORT, () => {
-    if (NODE_ENV === 'development'){
-        console.log(`Server running on http://localhost:${PORT}/`)
-    } else{
-        console.log(`Server running on port ${PORT}`)
-    }
-})
+if (PORT === null || PORT ===""){
+    PORT = 9000
+}
+
+app.listen(PORT)
+
+// app.listen(PORT, () => {
+//     if (NODE_ENV === 'development'){
+//         console.log(`Server running on http://localhost:${PORT}/`)
+//     } else{
+//         console.log(`Server running on port ${PORT}`)
+//     }
+// })
