@@ -14,7 +14,7 @@ const {
     addWorkout
 } = require('./controller.js')
 
-app.request(cors())
+app.use(cors())
 app.use(express.json())
 
 app.post('/seed', seed)
